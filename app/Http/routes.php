@@ -16,7 +16,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['middleware' => ['web','auth']], function () {
+Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
         return view('welcome');
     });
@@ -37,10 +37,20 @@ Route::group(['middleware' => ['web','auth']], function () {
 
     Route::get('/history', [
         'uses' => 'HomeController@history',
-        'as' => 'parseaza',
+        'as' => 'istoric',
         'middleware' => 'auth',
 
     ]);
+   /* Route::get('sendemail', [
+        'uses' => 'sendmail@mail',
+        'as' => 'mail',
+
+
+    ]);*/
+
+
+
+
     
 
 });

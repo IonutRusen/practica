@@ -27,5 +27,7 @@ class salveaza extends Controller
         $elem['stoc'] = $request['clasa2'];
 
         $elem->save();
+        return redirect()->route('istoric');
         }
+
 }
