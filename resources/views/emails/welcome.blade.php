@@ -7,7 +7,7 @@
 <h2>Learning Laravel!</h2>
 
 <div>
-    Produsul <b> {!! $url !!} </b> are un pret mai mic!
+    {!! $text !!}
 </div>
 
 </body>
